@@ -1,64 +1,69 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
+const path = require('path');
+
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
-    author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
-    },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
-    social: {
-      twitter: `kylemathews`,
-    },
+    title: 'Gatsby Casper',
+    description: 'A port of the casper blog built for gatsby',
+    siteUrl: 'https://gatsby-casper.netlify.com', // full path to blog - no ending slash
+  },
+  mapping: {
+    'MarkdownRemark.frontmatter.author': 'AuthorYaml',
   },
   plugins: [
-    `gatsby-plugin-image`,
+    'gatsby-plugin-sitemap',
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-plugin-sharp',
       options: {
-        path: `${__dirname}/content/blog`,
-        name: `blog`,
+        defaultQuality: 100,
+        stripMetadata: true,
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        name: 'content',
+        path: path.join(__dirname, 'src', 'content'),
       },
     },
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
           {
-            resolve: `gatsby-remark-images`,
+            resolve: 'gatsby-remark-responsive-iframe',
             options: {
-              maxWidth: 630,
+              wrapperStyle: 'margin-bottom: 1rem',
             },
           },
+          'gatsby-remark-prismjs',
+          'gatsby-remark-copy-linked-files',
+          'gatsby-remark-smartypants',
+          'gatsby-remark-reading-time',
           {
-            resolve: `gatsby-remark-responsive-iframe`,
+            resolve: 'gatsby-remark-images',
             options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`,
+              maxWidth: 2000,
+              quality: 100,
             },
           },
-          `gatsby-remark-prismjs`,
-          `gatsby-remark-copy-linked-files`,
-          `gatsby-remark-smartypants`,
         ],
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    // {
-    //   resolve: `gatsby-plugin-google-analytics`,
-    //   options: {
-    //     trackingId: `ADD YOUR TRACKING ID HERE`,
-    //   },
-    // },
+    'gatsby-transformer-json',
     {
-      resolve: `gatsby-plugin-feed`,
+      resolve: 'gatsby-plugin-canonical-urls',
+      options: {
+        siteUrl: 'https://gatsby-casper.netlify.com',
+      },
+    },
+    'gatsby-plugin-typescript',
+    'gatsby-plugin-emotion',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-react-helmet',
+    'gatsby-transformer-yaml',
+    {
+      resolve: 'gatsby-plugin-feed',
       options: {
         query: `
           {
@@ -75,56 +80,67 @@ module.exports = {
         feeds: [
           {
             serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.nodes.map(node => {
-                return Object.assign({}, node.frontmatter, {
-                  description: node.excerpt,
-                  date: node.frontmatter.date,
-                  url: site.siteMetadata.siteUrl + node.fields.slug,
-                  guid: site.siteMetadata.siteUrl + node.fields.slug,
-                  custom_elements: [{ "content:encoded": node.html }],
-                })
-              })
+              return allMarkdownRemark.edges.map(edge => {
+                return {
+                  ...edge.node.frontmatter,
+                  description: edge.node.excerpt,
+                  date: edge.node.frontmatter.date,
+                  url: `${site.siteMetadata.siteUrl}${edge.node.fields.slug}`,
+                  guid: `${site.siteMetadata.siteUrl}${edge.node.fields.slug}`,
+                  custom_elements: [{ 'content:encoded': edge.node.html }],
+                };
+              });
             },
             query: `
               {
                 allMarkdownRemark(
+                  filter: { frontmatter: { draft: { ne: true } } }
                   sort: { order: DESC, fields: [frontmatter___date] },
                 ) {
-                  nodes {
-                    excerpt
-                    html
-                    fields {
-                      slug
-                    }
-                    frontmatter {
-                      title
-                      date
+                  edges {
+                    node {
+                      excerpt
+                      html
+                      fields { slug }
+                      frontmatter {
+                        title
+                        date
+                      }
                     }
                   }
                 }
               }
             `,
-            output: "/rss.xml",
+            output: '/rss.xml',
+            title: 'Ghost\'s Blog',
+            match: '^/blog/',
           },
         ],
       },
     },
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: 'gatsby-plugin-postcss',
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
-        start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        postCssPlugins: [require('postcss-color-function'), require('cssnano')()],
       },
     },
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-gatsby-cloud`,
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: 'UA-XXXX-Y',
+        // Puts tracking script in the head instead of the body
+        head: true,
+        // IP anonymization for GDPR compliance
+        anonymize: true,
+        // Disable analytics for users with `Do Not Track` enabled
+        respectDNT: true,
+        // Avoids sending pageview hits from custom paths
+        exclude: ['/preview/**'],
+        // Specifies what percentage of users should be tracked
+        sampleRate: 100,
+        // Determines how often site speed tracking beacons will be sent
+        siteSpeedSampleRate: 10,
+      },
+    },
   ],
-}
+};
