@@ -1,14 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Adrian L Thomas`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Adrian L Thomas`,
+      summary: `Software Engineer in West Yorkshire`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    description: `Pizza, programming and cars - sometimes in that order`,
+    siteUrl: `https://www.adrian-thomas.com`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `AdrianLThomas`,
     },
   },
   plugins: [
