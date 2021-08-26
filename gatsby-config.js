@@ -9,6 +9,7 @@ module.exports = {
     siteUrl: `https://www.adrian-thomas.com`,
     social: {
       twitter: `AdrianLThomas`,
+      linkedIn: `adrianthomas`,
     },
   },
   plugins: [
