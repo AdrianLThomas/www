@@ -22,7 +22,7 @@ const Container = styled.div`
 const Hero = () => {
   return (
     <Container>
-        <Link to="/">Adrian L Thomas</Link>
+        <Link to="/"><h1>Adrian L Thomas</h1></Link>
         <Bio />
     </Container>
   )
