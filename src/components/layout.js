@@ -16,6 +16,7 @@ const Layout = ({ location, title, children }) => {
           twitter
           linkedIn
         }
+        siteUrl
       }
     }
   }
@@ -44,12 +45,16 @@ const Layout = ({ location, title, children }) => {
       <main>{children}</main>
       <footer>
         © {new Date().getFullYear()}
-          <a href={`https://twitter.com/${social.twitter}`}>
-            Twitter
-          </a>
-          <a href={`https://www.linkedin.com/in/${social.linkedIn}`}>
-            LinkedIn
-          </a>
+        &nbsp;&nbsp;
+        <a href={data.site.siteMetadata.siteUrl}>adrian-thomas.com</a>
+        &nbsp;&nbsp;
+        <a href={`https://twitter.com/${social.twitter}`}>
+          Twitter
+        </a>
+        &nbsp;&nbsp;
+        <a href={`https://www.linkedin.com/in/${social.linkedIn}`}>
+          LinkedIn
+        </a>
       </footer>
     </div>
   )

@@ -14,18 +14,11 @@ const Bio = () => {
     query BioQuery {
       site {
         siteMetadata {
-          author {
-            name
-            summary
-          }
+          description
         }
       }
     }
   `)
-
-  // Set these values by editing "siteMetadata" in gatsby-config.js
-  const author = data.site.siteMetadata?.author
-
 
   return (
     <div className="bio">
@@ -39,11 +32,9 @@ const Bio = () => {
         quality={95}
         alt="Profile picture"
       />
-      {author?.name && (
         <p>
-          Hi, I'm Adrian a {author?.summary}
+          {data.site.siteMetadata.description}
         </p>
-      )}
     </div>
   )
 }
