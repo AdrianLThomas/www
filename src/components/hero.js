@@ -12,6 +12,7 @@ const Container = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-bottom: 0.5rem solid dodgerblue;
 ` 
 
 const Hero = () => {

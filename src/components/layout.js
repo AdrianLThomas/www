@@ -4,9 +4,11 @@ import styled from "styled-components"
 import Hero from "./hero"
 import { fullWindowWidth } from "../commonStyles"
 
+
 const Footer  = styled.footer`
   ${fullWindowWidth()}
   text-align: center;
+  border-top: 0.5rem solid dodgerblue;
 
   & > span,a {
     margin-right: 15px;
@@ -14,6 +16,7 @@ const Footer  = styled.footer`
 
   margin-top: auto;
 `
+
 
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
@@ -55,19 +58,19 @@ const Layout = ({ location, title, children }) => {
     <div className="global-wrapper" data-is-root-path={isRootPath}>
       <header className="global-header">{header}</header>
       <main>{children}</main>
-      <Footer>
+        <Footer>
         <span>© {new Date().getFullYear()}</span>
 
-        <a href={`https://twitter.com/${social.twitter}`}>
-          Twitter
-        </a>
+      <a href={`https://twitter.com/${social.twitter}`}>
+        Twitter
+      </a>
 
-        <a href={`https://www.linkedin.com/in/${social.linkedIn}`}>
-          LinkedIn
-        </a>
+      <a href={`https://www.linkedin.com/in/${social.linkedIn}`}>
+        LinkedIn
+      </a>
 
-        <Link href="/rss.xml">RSS</Link>
-      </Footer>
+      <Link href="/rss.xml">RSS</Link>
+        </Footer>
     </div>
   )
 }
