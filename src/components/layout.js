@@ -65,6 +65,8 @@ const Layout = ({ location, title, children }) => {
         <a href={`https://www.linkedin.com/in/${social.linkedIn}`}>
           LinkedIn
         </a>
+
+        <Link href="/rss.xml">RSS</Link>
       </Footer>
     </div>
   )
