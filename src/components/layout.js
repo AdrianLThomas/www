@@ -11,6 +11,8 @@ const Footer  = styled.footer`
   & > span,a {
     margin-right: 15px;
   }
+
+  margin-top: auto;
 `
 
 const Layout = ({ location, title, children }) => {

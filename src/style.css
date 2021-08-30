@@ -316,3 +316,17 @@ a:focus {
     list-style-position: inside;
   }
 }
+
+/* ADRIAN OVERRIDES */
+
+/* bottom footer */
+html,body,.global-wrapper {
+  height: 100vh;
+}
+
+.global-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+/* eof bottom footer */
