@@ -21,7 +21,7 @@ const Bio = () => {
   `)
 
   return (
-    <div className="bio">
+    <div>
       <StaticImage
         className="bio-avatar"
         layout="fixed"

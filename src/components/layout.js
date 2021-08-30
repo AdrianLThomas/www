@@ -1,6 +1,17 @@
 import * as React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
+import styled from "styled-components"
 import Hero from "./hero"
+import { fullWindowWidth } from "../commonStyles"
+
+const Footer  = styled.footer`
+  ${fullWindowWidth()}
+  text-align: center;
+
+  & > span,a {
+    margin-right: 15px;
+  }
+`
 
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
@@ -42,19 +53,19 @@ const Layout = ({ location, title, children }) => {
     <div className="global-wrapper" data-is-root-path={isRootPath}>
       <header className="global-header">{header}</header>
       <main>{children}</main>
-      <footer>
-        © {new Date().getFullYear()}
-        &nbsp;&nbsp;
+      <Footer>
+        <span>© {new Date().getFullYear()}</span>
+
         <a href={data.site.siteMetadata.siteUrl}>adrian-thomas.com</a>
-        &nbsp;&nbsp;
+
         <a href={`https://twitter.com/${social.twitter}`}>
           Twitter
         </a>
-        &nbsp;&nbsp;
+
         <a href={`https://www.linkedin.com/in/${social.linkedIn}`}>
           LinkedIn
         </a>
-      </footer>
+      </Footer>
     </div>
   )
 }

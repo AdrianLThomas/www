@@ -3,20 +3,15 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 
 import Bio from "../components/bio"
-
-const fullWindowWidth = `
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-`
+import { fullWindowWidth } from "../commonStyles"
 
 const Container = styled.div`
-    ${fullWindowWidth}
-    background-color: violet;
+    ${fullWindowWidth()}
     height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 ` 
 
 const Hero = () => {
