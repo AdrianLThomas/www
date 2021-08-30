@@ -56,8 +56,6 @@ const Layout = ({ location, title, children }) => {
       <Footer>
         <span>© {new Date().getFullYear()}</span>
 
-        <a href={data.site.siteMetadata.siteUrl}>adrian-thomas.com</a>
-
         <a href={`https://twitter.com/${social.twitter}`}>
           Twitter
         </a>
