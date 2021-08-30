@@ -49,10 +49,11 @@ const BlogIndex = ({ data, location }) => {
 {/*                 
                 TODO
                 - full width header with links to social, blog page, github, etc.
+                
                 - recent posts
                 - pull in eslint rules and fix everything
-                - add scoped css
-                - footer */}
+                -
+                - footer stick to bottom */}
                 
 
               </article>
