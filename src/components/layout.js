@@ -38,7 +38,7 @@ const Layout = ({ location, title, children }) => {
     }
   }
   `)
-  const social = data.site.siteMetadata?.social
+  const social = data.site.siteMetadata.social
 
   let header
 

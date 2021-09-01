@@ -6,6 +6,7 @@
  */
 
 import * as React from "react"
+
 import { useStaticQuery, graphql } from "gatsby"
 
 const Bio = () => {
@@ -19,9 +20,7 @@ const Bio = () => {
     }
   `)
 
-  return (
-      <p>{data.site.siteMetadata.description}</p>
-  )
+  return <p>{data.site.siteMetadata.description}</p>
 }
 
 export default Bio
