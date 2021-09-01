@@ -45,17 +45,19 @@ const Layout = ({ location, title, children }) => {
       <header className="global-header"><Hero/></header>
       <main>{children}</main>
         <Footer>
-        <span>© {new Date().getFullYear()}</span>
+          <span>© {new Date().getFullYear()}</span>
 
-      <a href={`https://twitter.com/${social.twitter}`}>
-        Twitter
-      </a>
+          <Link href="/blog">Blog</Link>
 
-      <a href={`https://www.linkedin.com/in/${social.linkedIn}`}>
-        LinkedIn
-      </a>
+          <a href={`https://twitter.com/${social.twitter}`} target="_blank" rel="noreferrer">
+            Twitter
+          </a>
 
-      <Link href="/rss.xml">RSS</Link>
+          <a href={`https://www.linkedin.com/in/${social.linkedIn}`} target="_blank" rel="noreferrer">
+            LinkedIn
+          </a>
+
+          <Link href="/rss.xml" target="_blank" rel="noreferrer">RSS</Link>
         </Footer>
     </div>
   )

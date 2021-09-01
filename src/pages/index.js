@@ -11,6 +11,7 @@ const BlogIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <Seo title="Recent Posts" />
+      <h2>Latest Posts</h2>
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
@@ -49,7 +50,9 @@ const BlogIndex = ({ data, location }) => {
 {/*                 
                 TODO
                 - full width header with links to social, blog page, github, etc.
-                - recent posts*/}
+                - recent posts
+                - mobile layout
+                */}
                 
 
               </article>
