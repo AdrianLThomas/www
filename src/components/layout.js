@@ -40,23 +40,9 @@ const Layout = ({ location, title, children }) => {
   `)
   const social = data.site.siteMetadata.social
 
-  let header
-
-  if (isRootPath) {
-    header = (
-      <Hero/>
-    )
-  } else {
-    header = (
-      <Link className="header-link-home" to="/">
-        {title}
-      </Link>
-    )
-  }
-
   return (
     <div className="global-wrapper" data-is-root-path={isRootPath}>
-      <header className="global-header">{header}</header>
+      <header className="global-header"><Hero/></header>
       <main>{children}</main>
         <Footer>
         <span>© {new Date().getFullYear()}</span>
