@@ -1,4 +1,3 @@
-- sanity check rss 
 - write up introductory post
 
 post merge:
@@ -6,3 +5,9 @@ post merge:
 
 long term:
 - remove old school css -> common styles as styled components
+- cypress tests:
+- check each page
+- percy visual checks?
+- check rss
+- check sitemap
+- check robots.txt
