@@ -1,4 +1,3 @@
-- gatsby-plugin-manifest settings?
 - search for gatsby starter blog references
 - check seo
 - sanity check rss 
