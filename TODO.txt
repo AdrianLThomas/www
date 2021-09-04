@@ -1,7 +1,8 @@
-- search for gatsby starter blog references
-- check seo
 - sanity check rss 
 - write up introductory post
+
+post merge:
+- action to deploy to branch
 
 long term:
 - remove old school css -> common styles as styled components
