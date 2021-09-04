@@ -10,7 +10,7 @@ const Footer  = styled.footer`
   text-align: center;
   border-top: 0.5rem solid dodgerblue;
 
-  & > span,a {
+  & > * {
     margin-right: 15px;
   }
 
@@ -49,7 +49,7 @@ const Layout = ({ location, title, children }) => {
       <header className="global-header"><Hero/></header>
       <main>{children}</main>
         <Footer>
-          <span>© {new Date().getFullYear()}</span>
+          <span>© {new Date().getFullYear()} <Link to="/">adrian-thomas.com</Link></span>
 
           <a href={`https://twitter.com/${social.twitter}`} target="_blank" rel="noreferrer">
             Twitter
