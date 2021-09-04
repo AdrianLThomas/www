@@ -4,19 +4,6 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-import styled from "styled-components"
-
-const Section = styled.section`
-  pre {
-    padding: 0;
-    overflow: auto; // culprit?
-  }
-
-  p {
-    margin: 0;
-  }
-`
-
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata.title || `Title`
@@ -37,7 +24,7 @@ const BlogPostTemplate = ({ data, location }) => {
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           <p>{post.frontmatter.date}</p>
         </header>
-        <Section
+        <section
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />
