@@ -1,9 +1,21 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+
+import styled from "styled-components"
+
+const Section = styled.section`
+  pre {
+    padding: 0;
+    overflow: auto; // culprit?
+  }
+
+  p {
+    margin: 0;
+  }
+`
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
@@ -25,7 +37,7 @@ const BlogPostTemplate = ({ data, location }) => {
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           <p>{post.frontmatter.date}</p>
         </header>
-        <section
+        <Section
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />
