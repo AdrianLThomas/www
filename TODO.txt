@@ -2,12 +2,3 @@
 
 post merge:
 - action to deploy to branch
-
-long term:
-- remove old school css -> common styles as styled components
-- cypress tests:
-- check each page
-- percy visual checks?
-- check rss
-- check sitemap
-- check robots.txt
