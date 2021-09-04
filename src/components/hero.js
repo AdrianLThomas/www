@@ -14,6 +14,23 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   border-bottom: 0.5rem solid dodgerblue;
+
+  h1,p {
+    color: white;
+  }
+
+  h1 {
+    font-weight: bold;
+  }
+
+  p {
+    font-weight: lighter;
+    margin: 0;
+  }
+  
+  a {
+    text-decoration: none;
+  }
 `
 
 const Hero = () => {
