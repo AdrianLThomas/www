@@ -1,11 +1,12 @@
 - recent posts
 - mobile layout
-- font colours
+-  remove all `dangerouslySetInnerHTML`..
+
 - favicons
 - site metadata
 - check seo
-- introductory post
 - sanity check rss 
+- write up introductory post
 
--  remove all `dangerouslySetInnerHTML`..
-- blog template fonts
+long term:
+- remove old school css -> common styles as styled components

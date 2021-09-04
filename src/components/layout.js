@@ -62,13 +62,13 @@ const Layout = ({ location, title, children }) => {
       <Footer>
           <span>© {new Date().getFullYear()} <Link to="/">adrian-thomas.com</Link></span>
 
-          <a href={`https://twitter.com/${social.twitter}`} target="_blank" rel="noreferrer">
+          <Link href={`https://twitter.com/${social.twitter}`} target="_blank" rel="noreferrer">
             Twitter
-          </a>
+          </Link>
 
-          <a href={`https://www.linkedin.com/in/${social.linkedIn}`} target="_blank" rel="noreferrer">
+          <Link href={`https://www.linkedin.com/in/${social.linkedIn}`} target="_blank" rel="noreferrer">
             LinkedIn
-          </a>
+          </Link>
 
           <Link href="/blog">Blog</Link>
 

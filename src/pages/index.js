@@ -10,7 +10,7 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title="Recent Posts" />
+      <Seo />
       <h1>Latest Posts</h1>
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
