@@ -312,9 +312,9 @@ a:focus {
 
 /* BLOG OVERRIDES */
 /* bottom footer */
-html,body {
+html, body, #gatsby-focus-wrapper, #___gatsby {
+  height: 100%;
   background-color: #f9fafb;
-  height: 100vh;
 }
 
 /* eof bottom footer */
