@@ -9,4 +9,3 @@
 
 -  remove all `dangerouslySetInnerHTML`..
 - blog template fonts
-- margins
