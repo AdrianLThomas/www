@@ -8,7 +8,7 @@ import Bio from "../components/bio"
 
 const Container = styled.div`
   ${fullWindowWidth()}
-  height: 150px;
+  min-height: 150px;
   display: flex;
   flex-direction: column;
   justify-content: center;

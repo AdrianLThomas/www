@@ -6,6 +6,7 @@
 - check seo
 - introductory post
 - sanity check rss 
-- fix horizontal width on blog post page?
+
 -  remove all `dangerouslySetInnerHTML`..
 - blog template fonts
+- margins
