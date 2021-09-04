@@ -1,4 +1,6 @@
 - mobile layout
+    - fix footer
+    - fix horizontal navigation
 -  remove all `dangerouslySetInnerHTML`..
 
 - favicons
