@@ -52,6 +52,7 @@ const BlogIndex = ({ data, location }) => {
           )
         })}
       </ol>
+      <Link href="/blog">View all...</Link>
     </Layout>
   )
 }
@@ -65,7 +66,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, limit: 5) {
       nodes {
         excerpt
         fields {
