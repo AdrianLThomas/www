@@ -10,9 +10,19 @@ const Footer = styled.footer`
   margin-top:auto;
   text-align: center;
   border-top: 0.5rem solid dodgerblue;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 
   & > * {
     margin-right: 15px;
+  }
+
+  @media only screen and (max-width: 500px) {
+    // put website url on new line for mobile
+    & > span {
+      flex-basis: 500px;
+    }
   }
   
   a,span {
@@ -31,7 +41,7 @@ const Wrapper = styled.div`
 `
 
 
-const Layout = ({ location, title, children }) => {
+const Layout = ({ location, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
   const data = useStaticQuery(graphql`
