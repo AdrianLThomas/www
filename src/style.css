@@ -316,4 +316,8 @@ html, body, #gatsby-focus-wrapper, #___gatsby {
   background-color: #f9fafb;
 }
 
+.global-wrapper {
+  width:  100%;
+}
+
 /* eof bottom footer */

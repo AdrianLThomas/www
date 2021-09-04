@@ -1,5 +1,3 @@
-- mobile layout
-    - fix horizontal navigation
 -  remove all `dangerouslySetInnerHTML`..
 
 - favicons

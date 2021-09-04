@@ -14,6 +14,7 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   border-bottom: 0.5rem solid dodgerblue;
+  padding: 15px;
 
   h1,p {
     color: white;
