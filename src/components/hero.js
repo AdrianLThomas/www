@@ -16,7 +16,8 @@ const Container = styled.div`
   border-bottom: 0.5rem solid dodgerblue;
   padding: 15px;
 
-  h1,p {
+  h1,
+  p {
     color: white;
   }
 
@@ -28,7 +29,7 @@ const Container = styled.div`
     font-weight: lighter;
     margin: 0;
   }
-  
+
   a {
     text-decoration: none;
   }

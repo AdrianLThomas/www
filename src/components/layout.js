@@ -1,9 +1,10 @@
 import * as React from "react"
+
 import { useStaticQuery, graphql, Link } from "gatsby"
 import styled from "styled-components"
-import Hero from "./hero"
-import { fullWindowWidth } from "../commonStyles"
 
+import { fullWindowWidth } from "../commonStyles"
+import Hero from "./hero"
 
 const Footer = styled.footer`
   ${fullWindowWidth()}
@@ -24,8 +25,9 @@ const Footer = styled.footer`
       flex-basis: 500px;
     }
   }
-  
-  a,span {
+
+  a,
+  span {
     color: white;
   }
 `
@@ -40,50 +42,59 @@ const Wrapper = styled.div`
   }
 `
 
-
-const Layout = ({ location, children }) => {
-  const rootPath = `${__PATH_PREFIX__}/`
-  const isRootPath = location.pathname === rootPath
+const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
-  query FooterQuery {
-    site {
-      siteMetadata {
-        author {
-          name
-          summary
+    query FooterQuery {
+      site {
+        siteMetadata {
+          author {
+            name
+            summary
+          }
+          social {
+            twitter
+            linkedIn
+          }
+          siteUrl
         }
-        social {
-          twitter
-          linkedIn
-        }
-        siteUrl
       }
     }
-  }
   `)
   const social = data.site.siteMetadata.social
 
   return (
     <Wrapper>
       <Hero />
-      <div className="global-wrapper" data-is-root-path={isRootPath}>
+      <div className="global-wrapper">
         <main>{children}</main>
       </div>
       <Footer>
-          <span>© {new Date().getFullYear()} <Link to="/">adrian-thomas.com</Link></span>
+        <span>
+          © {new Date().getFullYear()} <Link to="/">adrian-thomas.com</Link>
+        </span>
 
-          <a href={`https://twitter.com/${social.twitter}`} target="_blank" rel="noreferrer">
-            Twitter
-          </a>
+        <a
+          href={`https://twitter.com/${social.twitter}`}
+          target="_blank"
+          rel="noreferrer"
+        >
+          Twitter
+        </a>
 
-          <a href={`https://www.linkedin.com/in/${social.linkedIn}`} target="_blank" rel="noreferrer">
-            LinkedIn
-          </a>
+        <a
+          href={`https://www.linkedin.com/in/${social.linkedIn}`}
+          target="_blank"
+          rel="noreferrer"
+        >
+          LinkedIn
+        </a>
 
-          <Link to="/blog">Blog</Link>
+        <Link to="/blog">Blog</Link>
 
-          <Link to="/rss.xml" target="_blank" rel="noreferrer">RSS</Link>
-        </Footer>
+        <Link to="/rss.xml" target="_blank" rel="noreferrer">
+          RSS
+        </Link>
+      </Footer>
     </Wrapper>
   )
 }

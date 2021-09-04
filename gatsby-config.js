@@ -116,8 +116,8 @@ module.exports = {
         name: `adrian-thomas.com`,
         short_name: `adrian-thomas.com`,
         start_url: `/`,
-        theme_color: '#1e90ff',
-        background_color: '#1a202c',
+        theme_color: "#1e90ff",
+        background_color: "#1a202c",
         display: `minimal-ui`,
         icon: `src/images/me.png`,
       },
@@ -125,6 +125,6 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-gatsby-cloud`,
     `gatsby-plugin-styled-components`,
-    `gatsby-plugin-sitemap`
+    `gatsby-plugin-sitemap`,
   ],
 }

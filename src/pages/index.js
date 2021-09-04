@@ -1,4 +1,5 @@
 import * as React from "react"
+
 import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
@@ -66,7 +67,10 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, limit: 5) {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      limit: 5
+    ) {
       nodes {
         excerpt
         fields {
