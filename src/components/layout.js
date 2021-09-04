@@ -5,20 +5,25 @@ import Hero from "./hero"
 import { fullWindowWidth } from "../commonStyles"
 
 
-const Footer  = styled.footer`
+const Footer = styled.footer`
   ${fullWindowWidth()}
+  margin-top:auto;
   text-align: center;
   border-top: 0.5rem solid dodgerblue;
 
   & > * {
     margin-right: 15px;
   }
-
-  margin-top: auto;
   
   a,span {
     color: white;
   }
+`
+
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  // justify-content: space-between;
 `
 
 
@@ -45,10 +50,12 @@ const Layout = ({ location, title, children }) => {
   const social = data.site.siteMetadata.social
 
   return (
-    <div className="global-wrapper" data-is-root-path={isRootPath}>
-      <header className="global-header"><Hero/></header>
-      <main>{children}</main>
-        <Footer>
+    <Wrapper>
+      <Hero />
+      <div className="global-wrapper" data-is-root-path={isRootPath}>
+        <main>{children}</main>
+      </div>
+      <Footer>
           <span>© {new Date().getFullYear()} <Link to="/">adrian-thomas.com</Link></span>
 
           <a href={`https://twitter.com/${social.twitter}`} target="_blank" rel="noreferrer">
@@ -63,7 +70,7 @@ const Layout = ({ location, title, children }) => {
 
           <Link href="/rss.xml" target="_blank" rel="noreferrer">RSS</Link>
         </Footer>
-    </div>
+    </Wrapper>
   )
 }
 
