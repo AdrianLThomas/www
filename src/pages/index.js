@@ -52,7 +52,7 @@ const BlogIndex = ({ data, location }) => {
           )
         })}
       </ol>
-      <Link href="/blog">View all...</Link>
+      <Link to="/blog">View all...</Link>
     </Layout>
   )
 }

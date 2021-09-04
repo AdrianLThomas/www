@@ -1,7 +1,5 @@
--  remove all `dangerouslySetInnerHTML`..
-
-- favicons
-- site metadata
+- gatsby-plugin-manifest settings?
+- search for gatsby starter blog references
 - check seo
 - sanity check rss 
 - write up introductory post
