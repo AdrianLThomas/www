@@ -15,6 +15,10 @@ const Footer  = styled.footer`
   }
 
   margin-top: auto;
+  
+  a,span {
+    color: white;
+  }
 `
 
 
@@ -47,8 +51,6 @@ const Layout = ({ location, title, children }) => {
         <Footer>
           <span>© {new Date().getFullYear()}</span>
 
-          <Link href="/blog">Blog</Link>
-
           <a href={`https://twitter.com/${social.twitter}`} target="_blank" rel="noreferrer">
             Twitter
           </a>
@@ -56,6 +58,8 @@ const Layout = ({ location, title, children }) => {
           <a href={`https://www.linkedin.com/in/${social.linkedIn}`} target="_blank" rel="noreferrer">
             LinkedIn
           </a>
+
+          <Link href="/blog">Blog</Link>
 
           <Link href="/rss.xml" target="_blank" rel="noreferrer">RSS</Link>
         </Footer>

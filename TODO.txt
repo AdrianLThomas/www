@@ -5,3 +5,4 @@
 - site metadata
 - check seo
 - introductory post
+- sanity check rss 
