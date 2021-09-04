@@ -1,0 +1,7 @@
+- recent posts
+- mobile layout
+- font colours
+- favicons
+- site metadata
+- check seo
+- introductory post
