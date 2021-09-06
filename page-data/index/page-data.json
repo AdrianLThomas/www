@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-pages-index-js",
     "path": "/",
-    "result": {"data":{"site":{"siteMetadata":{"title":"Adrian L Thomas"}},"allMarkdownRemark":{"nodes":[{"excerpt":"Well, it’s been nearly 5 years since I last wrote any kind of personal blog. I’ve written several posts for employers (bits and pieces on…","fields":{"slug":"/blog/2021-09-06/the-beginning/"},"frontmatter":{"date":"September 06, 2021","title":"The Beginning","description":null}}]}},"pageContext":{}},
+    "result": {"data":{"site":{"siteMetadata":{"title":"Adrian L Thomas"}},"allMarkdownRemark":{"nodes":[{"excerpt":"Well, it’s been nearly 5 years since I last wrote any kind of personal blog. I’ve written several posts for employers (a few pieces on…","fields":{"slug":"/blog/2021-09-06/the-beginning/"},"frontmatter":{"date":"September 06, 2021","title":"The Beginning","description":null}}]}},"pageContext":{}},
     "staticQueryHashes": ["2188205249","223224310","24654591"]}
