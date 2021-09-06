@@ -27,9 +27,9 @@ jobs:
       - name: Version File 🗂
         run: echo ${{ github.sha }} > public/version.txt
 
-      # - name: Deploy 🚀
-      #   if: github.ref == 'refs/heads/main'
-      #   uses: JamesIves/github-pages-deploy-action@4.1.4
-      #   with:
-      #     branch: gh-pages
-      #     folder: public
+      - name: Deploy 🚀
+        if: github.ref == 'refs/heads/main'
+        uses: JamesIves/github-pages-deploy-action@4.1.4
+        with:
+          branch: gh-pages
+          folder: public
