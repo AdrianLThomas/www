@@ -1,4 +1,6 @@
 name: Build, Test & Deploy
+on:
+  push:
 jobs:
   build-test-and-deploy:
     runs-on: ubuntu-latest
