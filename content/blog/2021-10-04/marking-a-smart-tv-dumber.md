@@ -19,4 +19,4 @@ Then in my router configuration I configured IPv4 port filtering to block all in
 
 
 
-The TV now has no in/outbound traffic, but it can still talk to the local network to serve up media. Perfect!
+The TV now has no in/outbound internet traffic, but it can still talk to the local network to serve up media. Perfect!
