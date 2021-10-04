@@ -1,4 +1,74 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Adrian L Thomas]]></title><description><![CDATA[Pizza, programming and cars - sometimes in that order.]]></description><link>https://www.adrian-thomas.com</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 06 Sep 2021 20:07:53 GMT</lastBuildDate><item><title><![CDATA[The Beginning]]></title><description><![CDATA[Well, it’s been nearly 5 years since I last wrote any kind of personal blog. I’ve written several posts for employers (a few pieces on…]]></description><link>https://www.adrian-thomas.com/blog/2021-09-06/the-beginning/</link><guid isPermaLink="false">https://www.adrian-thomas.com/blog/2021-09-06/the-beginning/</guid><pubDate>Mon, 06 Sep 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Well, it’s been nearly &lt;a href=&quot;https://adrianlucathomas.blogspot.com/&quot;&gt;5 years&lt;/a&gt; since I last wrote any kind of personal blog. I’ve written several posts for employers (a few pieces on NodeJS, Golang, GitHub Actions, etc.), but I finally got my act together and put something under my own domain. I’ve been writing lots of React lately, and also Gatsby in my own time - so it felt like a good idea to start off with the &lt;a href=&quot;https://gatsbystarterblogsource.gatsbyjs.io/&quot;&gt;Gatsby Starter Blog&lt;/a&gt;.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Adrian L Thomas]]></title><description><![CDATA[Pizza, programming and cars - sometimes in that order.]]></description><link>https://www.adrian-thomas.com</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 04 Oct 2021 19:02:06 GMT</lastBuildDate><item><title><![CDATA[Making a Smart TV Dumber]]></title><description><![CDATA[I recently purchased a shiny new 4K Samsung TV. It’s brilliant, but it’s nearly impossible to buy one without ‘smart’ capabilities (e.g…]]></description><link>https://www.adrian-thomas.com/blog/2021-10-04/marking-a-smart-tv-dumber/</link><guid isPermaLink="false">https://www.adrian-thomas.com/blog/2021-10-04/marking-a-smart-tv-dumber/</guid><pubDate>Mon, 04 Oct 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;I recently purchased a shiny new 4K Samsung TV. It’s brilliant, but it’s nearly impossible to buy one without ‘smart’ capabilities (e.g. Google Home, Alexa, Bixby, etc). There’s &lt;a href=&quot;https://www.kaspersky.co.uk/resource-center/threats/is-your-smart-tv-spying-on-you&quot; target=&quot;_blank&quot;&gt;plenty of security reasons why Smart TVs are bad&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This post is how to make it a bit dumber (but not brain dead!). I like that I can use my TV for streaming movies over the local network, but I don’t care for having apps running on it (Netflix works just fine on the PS5 thanks!), so I wanted to block all outbound internet activity for it.&lt;/p&gt;
+&lt;p&gt;In the end, this was quite simple. First, I ensured that the TV was assigned a static IP address. The easiest way for me to do this was from &lt;a href=&quot;https://pi-hole.net/&quot; target=&quot;_blank&quot;&gt;Pi-hole&lt;/a&gt; that I use as a DHCP server, and then assigned a static DHCP lease:&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/2f3f8a61314b4854eef3b59bbce3d347/eaf69/pihole-dhcp.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 75.31645569620254%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAA7CAAAOwgEVKEqAAAACcklEQVQ4y42UWXIlJxBFX7TX4J9ut4ZXBUUNFEUx1fAmWR0Ohzdge/8LOQ6QbEvqD/vjAplBXO4lEw5CCOpaMHQ1aVvo5wXjEnPcsHFlihsu7SWewoYNC5NfSs4vJ3zaUG2PqGuklBykEFRCMFU1q3O0k8PGE/vlidlHjHXMIWF9Im4XtvO1kJjZY6zHuIjqXgizuEMecqDGCe1XajVg0gW3XRn9QjcFWuNoBotdzizXb2i3MsyJIbuJO43qqP8mzDJz0GvDFFZkb7BpZ3/6Bb9dGeaIjXshsOlM2K+YsBbkKwj7Dana9wozYTeMhVBpy1g2PhUC7RZGvxZVU9zx24WwXcsho0u0xtO03RtCKUvQaUNvA6IbcWnjdL4QYmL24R84H/AhFuRYG4uZHar9YFm8WtZzoG6HYrPpNPdHwUPdcPdYc3eseaglX+6PBV8fa5y16Lz3ncJiuXohdAmlZyo1cDgc/hO/3yzr5UbX66KwtI14LUrb63JaO/4/wh8+feLPnz0mLC9FEW/bJqNpkf2EHCbSnFgnTxgmRtGihUJ/mK0aeI4LJ7fQqfbfOxRCvhCqjmaYCsI4c5Qtd3XDT481D7Lly2PN54eq5DLy+sevD/SiZWx7qneNLWqk6orCRlvmZkDcH+mbnuYoMf2IbjWqauhlh+kNnexQQnGZLVp1VN9ZflUoeoOPO7frM9t6IcWNJe4s6USKe4nXvA4bbo643LtvX8pHy/mljHFnWm9M6xWzZFww65Uxncts1lvJ63jC/fYHSk/UVYUoVX61/JawM740eZ5N/m3Cjp9XTs+/4vyG0Y7OhrIn/05NqXLmkfwF10XCTNU8p+kAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Pi-hole static IP address assignment&quot;
+        title=&quot;Pi-hole static IP address assignment&quot;
+        src=&quot;/static/2f3f8a61314b4854eef3b59bbce3d347/f058b/pihole-dhcp.png&quot;
+        srcset=&quot;/static/2f3f8a61314b4854eef3b59bbce3d347/c26ae/pihole-dhcp.png 158w,
+/static/2f3f8a61314b4854eef3b59bbce3d347/6bdcf/pihole-dhcp.png 315w,
+/static/2f3f8a61314b4854eef3b59bbce3d347/f058b/pihole-dhcp.png 630w,
+/static/2f3f8a61314b4854eef3b59bbce3d347/40601/pihole-dhcp.png 945w,
+/static/2f3f8a61314b4854eef3b59bbce3d347/78612/pihole-dhcp.png 1260w,
+/static/2f3f8a61314b4854eef3b59bbce3d347/eaf69/pihole-dhcp.png 1701w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Notice the IP address I set that will always be assigned to the MAC address (of the TV).&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Then in my router configuration I configured IPv4 port filtering to block all internet traffic. This is what it looks like on my Virgin Hub 3:&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/ac93f4a91fd2a3dfe4eb7a3ef4cba428/1ff84/virgin-ipfiltering.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 105.0632911392405%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAVCAIAAADJt1n/AAAACXBIWXMAAA7DAAAOwwHHb6hkAAACVklEQVQ4y6WSzU4UQRDH5xWIIRgNRhJZVEiIhqOePHnQI/oAkPAcfGzUxV3Eg4kefAhOC49h4MIVzDJM73R3zfT0Z5WZ7V1YSTCiv1Qqne78uz6TZ7dmXk7cezr5YHaq0bhit+caU3Pz0wuL9xcf3nk0O9WYn15Ymnny4u7S84mFx5ON5MtG6/tm6/PWdrvZvmrrH9qb251me+ddp7PRam+0Os2Pu+8/fWvufl3v7Gy1E48Y6BpUSSBJcGLnVACxjPqsvhmRFFAAgFJKa+29D95747xxTltvHTqH2mBVofNoTDAGjcEQMGDwITHaAIAQAgAQkYgKBjLl/Ge/FIWxtkLSRIZqr63VI0IIiTVGSFGWJQ4hpPrf2hN6pfzBge92fbcb9ve9EJ4ohBC8R8REKQUAUBRa6xh5SDwD0Noara7SykrtT08vn4gSrXXMWSkVxWVZ9no9ADhP097ZGZeSC5H1+1zKNE2zjHHOGWMAkCBiVek62frHQc1FcXJyCkXBWJamqQTgXDDGpJSMMc4FFzzP87Iso1iFEC5y9t5b54YNGFSIiCGEmC0SevSDWJQQUZ7nEuCi2LoFUvIBYkCe5/HMOffeX86ZiFxROMZQVcPVqMqiAGOMH2GHOGvteFNrMQjB0tQbO0rbVVVljDHWmgG/TWGMWlwqpY0Zm1FdYSRGxvH5aU1VVVsIsWEVXqzIdcSn42NaXqa3b+j1K9rbq8Vu1Ns/iYf9UHR4SEdH9OMHZVmCIdhBVX8lvlLzzSLH/KMRJc65uNX/EtkaI6WMa3RjMf0HvwD+bXsjQkrg3gAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Virgin Hub 3 IPv4 IP Filtering&quot;
+        title=&quot;Virgin Hub 3 IPv4 IP Filtering&quot;
+        src=&quot;/static/ac93f4a91fd2a3dfe4eb7a3ef4cba428/f058b/virgin-ipfiltering.png&quot;
+        srcset=&quot;/static/ac93f4a91fd2a3dfe4eb7a3ef4cba428/c26ae/virgin-ipfiltering.png 158w,
+/static/ac93f4a91fd2a3dfe4eb7a3ef4cba428/6bdcf/virgin-ipfiltering.png 315w,
+/static/ac93f4a91fd2a3dfe4eb7a3ef4cba428/f058b/virgin-ipfiltering.png 630w,
+/static/ac93f4a91fd2a3dfe4eb7a3ef4cba428/40601/virgin-ipfiltering.png 945w,
+/static/ac93f4a91fd2a3dfe4eb7a3ef4cba428/1ff84/virgin-ipfiltering.png 1040w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;The TV now has no in/outbound traffic, but it can still talk to the local network to serve up media. Perfect!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[The Beginning]]></title><description><![CDATA[Well, it’s been nearly 5 years since I last wrote any kind of personal blog. I’ve written several posts for employers (a few pieces on…]]></description><link>https://www.adrian-thomas.com/blog/2021-09-06/the-beginning/</link><guid isPermaLink="false">https://www.adrian-thomas.com/blog/2021-09-06/the-beginning/</guid><pubDate>Mon, 06 Sep 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Well, it’s been nearly &lt;a href=&quot;https://adrianlucathomas.blogspot.com/&quot;&gt;5 years&lt;/a&gt; since I last wrote any kind of personal blog. I’ve written several posts for employers (a few pieces on NodeJS, Golang, GitHub Actions, etc.), but I finally got my act together and put something under my own domain. I’ve been writing lots of React lately, and also Gatsby in my own time - so it felt like a good idea to start off with the &lt;a href=&quot;https://gatsbystarterblogsource.gatsbyjs.io/&quot;&gt;Gatsby Starter Blog&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;I introduced &lt;a href=&quot;https://styled-components.com/&quot;&gt;styled-components&lt;/a&gt; and &lt;a href=&quot;https://eslint.org/&quot;&gt;ESLint&lt;/a&gt; and put something basic together (that I plan to improve over time).&lt;/p&gt;
 &lt;p&gt;I’m going to use this platform for trying out some new tooling (maybe take a look at the &lt;a href=&quot;https://github.com/AdrianLThomas/AdrianLThomas.github.io/issues&quot;&gt;issues here&lt;/a&gt; for a sneek peak), but I’ll also write about my hobbies (see the header!).&lt;/p&gt;
 &lt;p&gt;Also, because I’m a proper Yorkshireman - this blog runs on &lt;a href=&quot;https://pages.github.com/&quot;&gt;GitHub Pages&lt;/a&gt; for free, with the DNS &amp;#x26; CDN managed at &lt;a href=&quot;https://www.cloudflare.com/&quot;&gt;Cloudflare&lt;/a&gt; for free. I build this blog on &lt;a href=&quot;https://github.com/features/actions&quot;&gt;GitHub Actions&lt;/a&gt; for… free. I suppose I do pay a few quid a year for the domain…&lt;/p&gt;
