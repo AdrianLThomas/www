@@ -1,6 +1,7 @@
 ---
 title: Golang for the Node Guy
 date: "2021-10-30"
+description: In our team we recently created a small new API in Go, to provide a more reliable search tool. In this post, I wanted to share some experiences from starting afresh with Go, through the lens of doing Node.js development.
 ---
 
 ![Gophernode](./gophernode.png "Gophernode")
