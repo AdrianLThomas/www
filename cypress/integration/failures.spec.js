@@ -1,10 +1,10 @@
-describe('Basic Checks', () => {
+describe("Basic Checks", () => {
   beforeEach(() => {
-    cy.visit('/');
-  });
+    cy.visit("/")
+  })
 
-  it('404', () => {
-    cy.visit(`/some-rubbish`, { failOnStatusCode: false });
-    cy.contains('404');
-  });
-});
+  it("404", () => {
+    cy.visit(`/some-rubbish`, { failOnStatusCode: false })
+    cy.contains("404")
+  })
+})

@@ -1,2 +1,2 @@
-import './commands';
-import '@percy/cypress';
+import "./commands"
+import "@percy/cypress"

@@ -1,15 +1,15 @@
-describe('SEO Checks', () => {
+describe("SEO Checks", () => {
   beforeEach(() => {
-    cy.visit('/');
-  });
+    cy.visit("/")
+  })
 
-  it('robots.txt', () => {
-    cy.request(`/robots.txt`).its('body').should('include', 'Allow: /');
-  });
+  it("robots.txt", () => {
+    cy.request(`/robots.txt`).its("body").should("include", "Allow: /")
+  })
 
-  it('sitemap.xml', () => {
+  it("sitemap.xml", () => {
     cy.request(`/sitemap/sitemap-index.xml`)
-      .its('body')
-      .should('include', '<sitemap>');
-  });
-});
+      .its("body")
+      .should("include", "<sitemap>")
+  })
+})

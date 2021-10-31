@@ -1,9 +1,9 @@
 beforeEach(() => {
-  cy.visit('/');
-});
+  cy.visit("/")
+})
 
 it(
-  'Should pass the audits',
+  "Should pass the audits",
   {
     retries: {
       runMode: 9,
@@ -13,6 +13,6 @@ it(
     // As I'm at the mercy of GHA cloud runners,
     // retries and an overall lower threshold
     // than reality is required (see: `cypress.json`).
-    cy.lighthouse();
+    cy.lighthouse()
   }
-);
+)

@@ -1,1 +1,1 @@
-import 'cypress-audit/commands';
+import "cypress-audit/commands"
