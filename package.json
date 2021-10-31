@@ -34,13 +34,17 @@
     "typeface-montserrat": "1.1.13"
   },
   "devDependencies": {
+    "cypress": "^8.7.0",
+    "cypress-audit": "^1.1.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-cypress": "^2.12.1",
     "eslint-plugin-import": "^2.24.2",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.26.1",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "prettier": "2.4.1"
+    "lighthouse": "^8.6.0",
+    "prettier": "2.4.1",
+    "start-server-and-test": "^1.14.0"
   },
   "homepage": "https://www.adrian-thomas.com",
   "keywords": [
@@ -57,7 +61,11 @@
     "start": "npm run develop",
     "serve": "gatsby serve --host=0.0.0.0",
     "clean": "gatsby clean",
+    "cypress:run": "cypress run --browser chrome --headless",
+    "cypress:open": "CYPRESS_BASE_URL=http://localhost:8000 cypress open",
+    "cypress:ci": "npx start-server-and-test serve http://localhost:9000 cypress:run",
     "lint": "eslint .",
-    "lint:fix": "eslint --fix ."
+    "lint:fix": "eslint --fix .",
+    "lighthouse": "lighthouse https://www.adrian-thomas.com --output-path='./lighthouse.html' --view"
   }
 }
