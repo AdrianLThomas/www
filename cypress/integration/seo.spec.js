@@ -4,14 +4,17 @@ describe("SEO Checks", () => {
   })
 
   it("robots.txt", () => {
-    cy.request(`/robots.txt`).its("body").should("include", "Allow: /")
+    cy.request(`/robots.txt`).its("body").should("include", "User-agent: *")
   })
 
   it("rss.xml", () => {
     cy.request(`/rss.xml`)
       .its("body")
-      .should("include", '<rss version="2.0">')
-      .and("include", "<title>The Beginning</title>")
+      .should(
+        "include",
+        'version="2.0"><channel><title><![CDATA[Adrian L Thomas]]></title>'
+      )
+      .and("include", "<title><![CDATA[The Beginning]]></title>")
   })
 
   it("sitemap.xml", () => {
