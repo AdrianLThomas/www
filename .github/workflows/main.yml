@@ -17,6 +17,12 @@ jobs:
         run: |
           npm ci
           npm run build
+      
+      - name: Cypress Test 🇨🇾
+        env:
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
+        run: |
+          npm run cypress:ci
 
       - name: Lint 🧶
         run: |
