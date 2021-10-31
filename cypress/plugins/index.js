@@ -1,4 +1,3 @@
-// @ts-ignore
 const { lighthouse, prepareAudit } = require("cypress-audit")
 
 module.exports = on => {
