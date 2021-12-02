@@ -12,15 +12,17 @@ class Tiles {
   }
 
    paint(ctx, geom, properties) {
+    var dpr = devicePixelRatio;
+console.log(dpr)
     ctx.lineWidth = 1
-    const iWidth = geom.width;
-    const iHeight = geom.height;
-    const step = iWidth / 70 // proportion of width to use as a step
+    const iWidth = geom.width * dpr;
+    const iHeight = geom.height * dpr;
+    const step = iWidth / 100 // proportion of width to use as a step
 
     for (var x = 0; x < iWidth; x += step) {
       for (var y = 0; y < iHeight; y += step) {
         ctx.beginPath()
-        ctx.strokeStyle = `rgba(${x}, ${y}, ${x * y}, 0.5)`
+        ctx.strokeStyle = `rgba(${x}, ${y}, ${x * y}, 0.4)`
 
         this.draw(ctx, x, y, step, step)
 

@@ -1,6 +1,9 @@
-if(CSS.paintWorklet) {
-    CSS.paintWorklet.addModule('tilePattern.js');
-}
+(async function () {
+    if (!CSS.paintWorklet) {
+      await import("css-paint-polyfill");
+    }
+    CSS.paintWorklet.addModule("./tilePattern.js");
+  })();
 
 const fullWindowWidth = (backgroundColor = "#1a202c") => `
     width: 100%;
