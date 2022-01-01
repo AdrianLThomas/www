@@ -3,11 +3,11 @@ import * as React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 
-import { fullWindowWidth } from "../commonStyles"
+import { pattern, fullWindowWidth } from "../commonStyles"
 import Bio from "../components/bio"
 
 const Container = styled.div`
-  ${fullWindowWidth()}
+  ${fullWindowWidth(pattern())}
   min-height: 150px;
   display: flex;
   flex-direction: column;

@@ -3,11 +3,11 @@ import * as React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import styled from "styled-components"
 
-import { fullWindowWidth } from "../commonStyles"
+import { fullWindowWidth, pattern } from "../commonStyles"
 import Hero from "./hero"
 
 const Footer = styled.footer`
-  ${fullWindowWidth()}
+  ${fullWindowWidth(pattern())}
   margin-top:auto;
   text-align: center;
   border-top: 0.5rem solid dodgerblue;
@@ -40,6 +40,8 @@ const Wrapper = styled.div`
   .global-wrapper {
     margin-top: 18px;
   }
+
+  ${pattern({ backgroundColor: "#ffffff", color: "#fbfbfb" })}
 `
 
 const Layout = ({ children }) => {

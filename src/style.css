@@ -313,7 +313,6 @@ a:focus {
 /* bottom footer */
 html, body, #gatsby-focus-wrapper, #___gatsby {
   height: 100%;
-  background-color: #f9fafb;
 }
 
 .global-wrapper {
