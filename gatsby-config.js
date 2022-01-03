@@ -75,6 +75,7 @@ module.exports = {
         `,
         feeds: [
           {
+            title: 'Adrian L Thomas | https://www.adrian-thomas.com',
             serialize: ({ query: { site, allMarkdownRemark } }) => {
               return allMarkdownRemark.nodes.map(node => {
                 return Object.assign({}, node.frontmatter, {
