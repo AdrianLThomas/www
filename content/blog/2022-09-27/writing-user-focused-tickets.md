@@ -29,7 +29,7 @@ The problem is a bit like declarative vs imperative programming: describing the 
 
 The above doesn't describe exactly how it should be implemented, just what the expected outcomes are. This provides flexibility and allows you to have conversations to arrive at the best solution, and make those decisions as late as possible (perhaps after further research).
 
-If your team is responsible for different areas of development (e.g. frontend, backend) then you can then make the ticket more granular for those specific tasks.
+If your team is responsible for different areas of development then you can write task tickets for those specific tasks that relate to the user story.
 
 Now, everyone has the context, the shared goal and knows when they can say the goal is accomplished. At minimum it's clear what the ticket actually means and what needs to be achieved.
 
