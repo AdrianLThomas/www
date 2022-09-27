@@ -5,7 +5,7 @@ describe("Basic Checks", () => {
 
   it("Home Page", () => {
     cy.contains("Adrian L Thomas")
-    cy.contains("Latest Posts")
+    cy.contains("All Posts")
     cy.contains("September 06, 2021")
   })
 
