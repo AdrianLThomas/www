@@ -40,8 +40,6 @@ const Wrapper = styled.div`
   .global-wrapper {
     margin-top: 18px;
   }
-
-  ${pattern({ backgroundColor: "#ffffff", color: "#fbfbfb" })}
 `
 
 const Layout = ({ children }) => {
