@@ -1,6 +1,6 @@
 describe("Basic Checks", () => {
   beforeEach(() => {
-    cy.visit("/")
+    cy.visit("/blog")
   })
 
   it("Home Page", () => {
