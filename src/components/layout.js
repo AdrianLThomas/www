@@ -52,6 +52,7 @@ const Layout = ({ children }) => {
             summary
           }
           social {
+            github
             twitter
             linkedIn
           }
@@ -72,6 +73,14 @@ const Layout = ({ children }) => {
         <span>
           © {new Date().getFullYear()} <Link to="/">adrian-thomas.com</Link>
         </span>
+
+        <a
+          href={`https://github.com/${social.github}`}
+          target="_blank"
+          rel="noreferrer"
+        >
+          GitHub
+        </a>
 
         <a
           href={`https://twitter.com/${social.twitter}`}
