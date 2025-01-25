@@ -38,7 +38,7 @@ const Container = styled.div`
 const Hero = () => {
   return (
     <Container>
-      <Link to="/">
+      <Link to="/blog">
         <h1>Adrian L Thomas</h1>
       </Link>
       <Bio />
