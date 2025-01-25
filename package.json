@@ -62,10 +62,10 @@
     "serve": "gatsby serve --host=0.0.0.0",
     "clean": "gatsby clean",
     "cypress:run": "cypress run --browser chrome --headless",
-    "cypress:open": "CYPRESS_BASE_URL=http://localhost:8000 cypress open",
-    "cypress:ci": "npx start-server-and-test serve http://localhost:9000 cypress:run",
+    "cypress:open": "CYPRESS_BASE_URL=http://localhost:8000/blog cypress open",
+    "cypress:ci": "npx start-server-and-test serve http://localhost:9000/blog cypress:run",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
-    "lighthouse": "lighthouse https://www.adrian-thomas.com --output-path='./lighthouse.html' --view"
+    "lighthouse": "lighthouse https://www.adrian-thomas.com/blog --output-path='./lighthouse.html' --view"
   }
 }
